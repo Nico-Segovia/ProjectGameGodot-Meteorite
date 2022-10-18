@@ -1,3 +1,9 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game/Naves/Player/MaterialFisico.tres" type="PhysicsMaterial" id=1]
 
 [node name="Player" type="RigidBody2D"]
+position = Vector2( -2, 0 )
+physics_material_override = ExtResource( 1 )
+gravity_scale = 0.0
+can_sleep = false
