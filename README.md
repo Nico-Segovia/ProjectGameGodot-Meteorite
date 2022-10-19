@@ -1,5 +1,5 @@
-# ProyectMeteorite
-New Game Proyect whit GodotEngine (In Progress)
+# ProjectMeteorite
+New Game Project whit GodotEngine (In Progress)
 
 
 # Meteoritos

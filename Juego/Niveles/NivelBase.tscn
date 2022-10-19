@@ -1,0 +1,66 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Juego/Naves/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Juego/Niveles/Nivel.gd" type="Script" id=2]
+[ext_resource path="res://default_env.tres" type="Environment" id=3]
+[ext_resource path="res://Juego/Explosiones/Explosion.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Juego/Niveles/Fondos/StarFieldBackground.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Juego/Meteoros/Meteorito.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Juego/Explosiones/Explosion meteoro/ExplosionMeteorito.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Juego/Meteoros/SectorMeteoritos.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Juego/Niveles/CamaraNivel.gd" type="Script" id=10]
+[ext_resource path="res://Juego/Naves/Enemigos/EnemigoInterceptor/EnemigoInterceptor.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Juego/EstacionRecarga/Rele/ReleMasa.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Juego/UI/HUD/HUD.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Juego/AutoLoads/MusicaJuego.tscn" type="PackedScene" id=16]
+[ext_resource path="res://Juego/Niveles/Musicas/MusicaNivel/POL-ready-for-action-short.tres" type="AudioStream" id=17]
+[ext_resource path="res://Juego/Niveles/Musicas/MusicaCombate/POL-space-ranger-short.tres" type="AudioStream" id=18]
+
+[node name="NivelBase" type="Node2D"]
+script = ExtResource( 2 )
+explosion = ExtResource( 4 )
+meteorito = ExtResource( 6 )
+explosion_meteorito = ExtResource( 7 )
+sector_meteoritos = ExtResource( 9 )
+tiempo_transicion_camara = 1.0
+enemigo_interceptor = ExtResource( 12 )
+rele_masa = ExtResource( 14 )
+tiempo_limite = 120
+musica_nivel = ExtResource( 17 )
+musica_combate = ExtResource( 18 )
+
+[node name="HUD" parent="." instance=ExtResource( 15 )]
+
+[node name="MusicaJuego" parent="." instance=ExtResource( 16 )]
+
+[node name="TiggersLluviaMeteoritos" type="Node2D" parent="."]
+
+[node name="TiggersInterceptores" type="Node2D" parent="."]
+
+[node name="ContenedorEstacion" type="Node2D" parent="."]
+
+[node name="ContenedorBase" type="Node2D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 3 )
+
+[node name="CamaraNivel" type="Camera2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="TweenZoom" type="Tween" parent="CamaraNivel"]
+
+[node name="TweenCamara" type="Tween" parent="."]
+
+[node name="RestartTimer" type="Timer" parent="."]
+
+[node name="ActualizadorTimer" type="Timer" parent="."]
+
+[node name="StarFieldBackground" parent="." instance=ExtResource( 5 )]
+color_fondo = Color( 0, 0.0156863, 0.243137, 1 )
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1417, 1375 )
+
+[connection signal="tween_completed" from="TweenCamara" to="." method="_on_TweenCamara_tween_completed"]
+[connection signal="timeout" from="RestartTimer" to="." method="_on_RestartTimer_timeout"]
+[connection signal="timeout" from="ActualizadorTimer" to="." method="_on_ActualizadorTimer_timeout"]

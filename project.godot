@@ -8,15 +8,332 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "AreaColision",
+"language": "GDScript",
+"path": "res://Juego/Base/AreaColision.gd"
+}, {
+"base": "ProgressBar",
+"class": "BarraSalud",
+"language": "GDScript",
+"path": "res://Juego/Naves/BarraSalud.gd"
+}, {
+"base": "Node2D",
+"class": "BaseEnemiga",
+"language": "GDScript",
+"path": "res://Juego/Base/BaseEnemiga.gd"
+}, {
+"base": "Camera2D",
+"class": "CamaraJuego",
+"language": "GDScript",
+"path": "res://Juego/Niveles/CamaraJuego.gd"
+}, {
+"base": "CamaraJuego",
+"class": "CamaraNivel",
+"language": "GDScript",
+"path": "res://Juego/Niveles/CamaraNivel.gd"
+}, {
+"base": "CamaraJuego",
+"class": "CamaraPlayer",
+"language": "GDScript",
+"path": "res://Juego/Naves/Player/CamaraPlayer.gd"
+}, {
+"base": "Node2D",
+"class": "Canion",
+"language": "GDScript",
+"path": "res://Juego/Proyectiles/canion/Canion.gd"
+}, {
+"base": "NinePatchRect",
+"class": "ContenedorInformacion",
+"language": "GDScript",
+"path": "res://Juego/UI/HUD/ContenedorInformacion.gd"
+}, {
+"base": "ContenedorInformacion",
+"class": "ContenedorInformacionEnergia",
+"language": "GDScript",
+"path": "res://Juego/UI/HUD/ContenedorInformacionEnergia.gd"
+}, {
+"base": "NaveBase",
+"class": "EnemigoBase",
+"language": "GDScript",
+"path": "res://Juego/Naves/Enemigos/EnemigoBase.gd"
+}, {
+"base": "Area2D",
+"class": "EnemigoDummy",
+"language": "GDScript",
+"path": "res://Juego/Naves/Enemigos/EnemigoDummy.gd"
+}, {
+"base": "EnemigoBase",
+"class": "EnemigoInteceptor",
+"language": "GDScript",
+"path": "res://Juego/Naves/Enemigos/EnemigoInterceptor/EnemigoInterceptor.gd"
+}, {
+"base": "EnemigoBase",
+"class": "EnemigoOrbital",
+"language": "GDScript",
+"path": "res://Juego/Naves/Enemigos/EnemigoOrbital/EnemigoOrbital.gd"
+}, {
+"base": "Area2D",
+"class": "Escudo",
+"language": "GDScript",
+"path": "res://Juego/Naves/Player/Escudo/Escudo.gd"
+}, {
+"base": "Node2D",
+"class": "EstacionRecarga",
+"language": "GDScript",
+"path": "res://Juego/EstacionRecarga/EstacionRecarga.gd"
+}, {
+"base": "Line2D",
+"class": "Estela",
+"language": "GDScript",
+"path": "res://Juego/Naves/Player/Estela/Trail2D.gd"
+}, {
+"base": "Node2D",
+"class": "ExplosionMeteorito",
+"language": "GDScript",
+"path": "res://Juego/Explosiones/Explosion meteoro/ExplosionMeteorito.gd"
+}, {
+"base": "RigidBody2D",
+"class": "Meteorito",
+"language": "GDScript",
+"path": "res://Juego/Meteoros/Meteorito.gd"
+}, {
+"base": "Position2D",
+"class": "MeteoritoSpawner",
+"language": "GDScript",
+"path": "res://Juego/Meteoros/MeteoritosSpawner.gd"
+}, {
+"base": "AudioStreamPlayer2D",
+"class": "Motor",
+"language": "GDScript",
+"path": "res://Juego/Naves/Player/Motor/MotorSFX.gd"
+}, {
+"base": "RigidBody2D",
+"class": "NaveBase",
+"language": "GDScript",
+"path": "res://Juego/Naves/NaveBase.gd"
+}, {
+"base": "Node2D",
+"class": "Nivel",
+"language": "GDScript",
+"path": "res://Juego/Niveles/Nivel.gd"
+}, {
+"base": "NaveBase",
+"class": "Player",
+"language": "GDScript",
+"path": "res://Juego/Naves/Player/Player.gd"
+}, {
+"base": "Area2D",
+"class": "Proyectil",
+"language": "GDScript",
+"path": "res://Juego/Proyectiles/Proyectil.gd"
+}, {
+"base": "RayCast2D",
+"class": "RayoLaser",
+"language": "GDScript",
+"path": "res://Juego/Proyectiles/Laser/LaserBeam2D.gd"
+}, {
+"base": "Node2D",
+"class": "ReleMasa",
+"language": "GDScript",
+"path": "res://Juego/EstacionRecarga/Rele/ReleMasa.gd"
+}, {
+"base": "Path2D",
+"class": "RutaEnemigo",
+"language": "GDScript",
+"path": "res://Juego/Base/RutaEnemigo.gd"
+}, {
+"base": "Area2D",
+"class": "SectorDePeligro",
+"language": "GDScript",
+"path": "res://Juego/ZonaPeligro/SectorDePeligro.gd"
+}, {
+"base": "Node2D",
+"class": "SectorMeteoritos",
+"language": "GDScript",
+"path": "res://Juego/Meteoros/SectorMeteoritos.gd"
+} ]
+_global_script_class_icons={
+"AreaColision": "",
+"BarraSalud": "",
+"BaseEnemiga": "",
+"CamaraJuego": "",
+"CamaraNivel": "",
+"CamaraPlayer": "",
+"Canion": "",
+"ContenedorInformacion": "",
+"ContenedorInformacionEnergia": "",
+"EnemigoBase": "",
+"EnemigoDummy": "",
+"EnemigoInteceptor": "",
+"EnemigoOrbital": "",
+"Escudo": "",
+"EstacionRecarga": "",
+"Estela": "",
+"ExplosionMeteorito": "",
+"Meteorito": "",
+"MeteoritoSpawner": "",
+"Motor": "",
+"NaveBase": "",
+"Nivel": "",
+"Player": "",
+"Proyectil": "",
+"RayoLaser": "",
+"ReleMasa": "",
+"RutaEnemigo": "",
+"SectorDePeligro": "",
+"SectorMeteoritos": ""
+}
+
 [application]
 
-config/name="GameMeteorite"
-run/main_scene="res://Game/Levels/NivelTest.tscn"
-config/icon="res://icon.png"
+config/name="Metoritos"
+run/main_scene="res://Juego/Niveles/MenuPrincipal.tscn"
+config/icon="res://icono_juego.png"
 
-[gui]
+[autoload]
 
-common/drop_mouse_on_gui_input_disabled=true
+Eventos="*res://Juego/AutoLoads/Eventos.gd"
+DatosJuego="*res://Juego/AutoLoads/DatosJuego.gd"
+MusicaJuego="*res://Juego/AutoLoads/MusicaJuego.tscn"
+
+[debug]
+
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/resizable=false
+window/size/always_on_top=true
+window/size/test_width=1280
+window/size/test_height=720
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_select={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_cancel={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_focus_next={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_focus_prev={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777231,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777233,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777232,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777234,"unicode":0,"echo":false,"script":null)
+ ]
+}
+mover_adelante={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":87,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777232,"unicode":0,"echo":false,"script":null)
+ ]
+}
+mover_atras={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":83,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777234,"unicode":0,"echo":false,"script":null)
+ ]
+}
+rotar_horario={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":68,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777233,"unicode":0,"echo":false,"script":null)
+ ]
+}
+rotar_antihorario={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":65,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777231,"unicode":0,"echo":false,"script":null)
+ ]
+}
+diparo_principal={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":80,"unicode":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+disparo_secundario={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":75,"unicode":0,"echo":false,"script":null)
+, Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":2,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+escudo={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":66,"unicode":0,"echo":false,"script":null)
+ ]
+}
+zoom_alejar={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777347,"unicode":0,"echo":false,"script":null)
+ ]
+}
+zoom_acercar={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":4,"pressed":false,"doubleclick":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777349,"unicode":0,"echo":false,"script":null)
+ ]
+}
+recarga_laser={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
+recarga_escudo={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":82,"unicode":0,"echo":false,"script":null)
+ ]
+}
+minimapa={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777218,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="player"
+2d_physics/layer_2="enemigo"
+2d_physics/layer_3="meteorito"
+2d_physics/layer_4="proyectil_player"
+2d_physics/layer_5="proyectil_enemigo"
+2d_physics/layer_6="Estacion"
+2d_physics/layer_7="BaseEnemiga"
 
 [physics]
 
