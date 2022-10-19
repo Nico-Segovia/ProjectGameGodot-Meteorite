@@ -35,6 +35,7 @@ func _process(_delta):
 	if esta_disparando and esta_enfriado and puede_disparar:
 		disparar()
 
+## Metodos custom
 func almacenar_puntos_disparo():
 	for nodo in get_children():
 		if nodo is Position2D:
@@ -45,7 +46,7 @@ func disparar():
 	disparo_sfx.play()
 	timer_enfriamiento.start()
 	for punto_disparo in puntos_disparo:
-		var new_proyectil: Proyectil = proyectil.instance()
+		var new_proyectil:Proyectil = proyectil.instance()
 		new_proyectil.crear(
 			punto_disparo.global_position,
 			get_owner().rotation,
@@ -53,7 +54,7 @@ func disparar():
 			danio_proyectil
 		)
 		Eventos.emit_signal("disparo", new_proyectil)
-
+	#print("piw piw estoy disparando")
 
 func _on_TimerEnfriamiento_timeout():
 	esta_enfriado = true

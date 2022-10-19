@@ -61,12 +61,11 @@ func _process(_delta):
 	player_input()
 
 ## Metodos custom 
-
 func player_input() -> void:
 	if not esta_input_activo():
 		return 
 	
-	#Empuje y Encencido sonido motor
+	# Empuje y Encencido sonido motor
 	empuje = Vector2.ZERO
 	if Input.is_action_pressed("mover_adelante"):
 		empuje = Vector2(potencia_motor, 0)
