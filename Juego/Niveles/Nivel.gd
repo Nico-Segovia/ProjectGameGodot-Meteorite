@@ -11,10 +11,10 @@ export var tiempo_transicion_camara: float = 2.0
 export var enemigo_interceptor: PackedScene = null
 export var rele_masa: PackedScene = null
 export var tiempo_limite: int = 10
-##Musicas
+##Music
 export var musica_nivel: AudioStream = null
 export var musica_combate: AudioStream = null
-#Niveles
+#levels
 export(String, FILE, "*.tscn") var prox_nivel = ""
 
 ## Atributos Onready
@@ -53,7 +53,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		OS.window_fullscreen = true
 
 ##Metodos Custom
-func conectar_seniales():
+func conectar_seniales() -> void:
 	Eventos.connect("disparo", self, "_on_disparo")
 	Eventos.connect("nave_destruida",self, "_on_nave_destruida")
 	Eventos.connect("spawn_meteorito", self, "_on_spawn_meteoritos")
@@ -63,7 +63,7 @@ func conectar_seniales():
 	Eventos.connect("spawn_orbital", self, "_on_spawn_orbital")
 	Eventos.connect("nivel_completado", self, "_on_nivel_completado")
 
-func crear_contenedores():
+func crear_contenedores() -> void:
 	contenedor_proyectiles = Node.new()
 	contenedor_proyectiles.name = "ContenedorProyectiles"
 	add_child(contenedor_proyectiles)
@@ -82,7 +82,6 @@ func crear_contenedores():
 
 func contabilizar_bases_enemigas() -> int:
 	return $ContenedorBase.get_child_count()
-
 
 func crear_sector_meteoritos(centro_camara: Vector2, numero_peligro: int) -> void: 
 	MusicaJuego.transicion_musicas()
@@ -152,7 +151,7 @@ func crear_rele() -> void:
 	add_child(new_rele_masa)
 
 ## Conexion Señales Externas
-func _on_disparo(proyectil: Proyectil):
+func _on_disparo(proyectil:Proyectil) -> void:
 	contenedor_proyectiles.add_child(proyectil)
 
 func _on_nave_destruida(nave: Player, posicion: Vector2, num_explosiones: int) ->void:
