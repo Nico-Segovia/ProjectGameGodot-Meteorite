@@ -10,7 +10,7 @@
 [ext_resource path="res://Juego/Naves/Player/Player.gd" type="Script" id=8]
 [ext_resource path="res://Juego/Naves/Player/Escudo/Escudo.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Juego/Naves/Player/CamaraPlayer.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Juego/Proyectiles/ProyectilPlayer2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Juego/Proyectiles/ProyectilPlayer.tscn" type="PackedScene" id=11]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 39.0
@@ -68,6 +68,9 @@ energia = 5.0
 [node name="EstelaPuntoInicio" parent="." index="6" instance=ExtResource( 1 )]
 position = Vector2( -17, 0 )
 
+[node name="Trail2D" parent="EstelaPuntoInicio" index="0"]
+points = PoolVector2Array( 0, 0, 60, 0 )
+
 [node name="MotorSFX" parent="." index="7" instance=ExtResource( 7 )]
 
 [node name="AnimationPlayer" parent="." index="8" instance=ExtResource( 2 )]
@@ -79,3 +82,5 @@ position = Vector2( -17, 0 )
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
 
 [editable path="Canion"]
+[editable path="EstelaPuntoInicio"]
+[editable path="MotorSFX"]
