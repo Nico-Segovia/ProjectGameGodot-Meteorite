@@ -1,3 +1,4 @@
+# LaserBeam2d.gd
 # Casts a laser along a raycast, emitting particles on the impact point.
 # Use `is_casting` to make the laser fire and stop.
 # You can attach it to a weapon or a ship; the laser will rotate with its parent.
@@ -47,13 +48,13 @@ func set_is_casting(cast: bool) -> void:
 	is_casting = cast
 
 	if is_casting:
-		laser_sfx.play() #Activa sonido laser
+		laser_sfx.play() # Activa sonido laser
 		cast_to = Vector2.ZERO
 		fill.points[1] = cast_to
 		appear()
 	else:
 		Eventos.emit_signal("ocultar_energia_laser")
-		laser_sfx.stop() #Desactiva sonido laser
+		laser_sfx.stop() # Desactiva sonido laser
 		collision_particles.emitting = false
 		disappear()
 

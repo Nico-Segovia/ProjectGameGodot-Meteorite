@@ -22,6 +22,10 @@ var _offset := 0.0
 
 onready var target: Node2D = get_node_or_null(target_path)
 
+## Setters and Getters
+func set_max_points(valor:int) -> void:
+	max_points
+
 
 func _ready() -> void:
 	if not target:
@@ -104,6 +108,4 @@ func set_emitting(emitting: bool) -> void:
 		clear_points()
 		_points_creation_time.clear()
 		_last_point = to_local(target.global_position) + calculate_offset()
-#Custom
-func set_max_points(valor: int): 
-	max_points = valor
+
