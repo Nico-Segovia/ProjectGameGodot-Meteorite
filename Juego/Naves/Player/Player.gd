@@ -11,7 +11,7 @@ var dir_rotacion: int = 0
 var empuje: Vector2 = Vector2.ZERO
 
 ## Atributos onready
-onready var laser: RayoLaser = $LaserBeam2D setget ,get_laser
+onready var laser: RayoLaser = $LaserBeam2D 
 onready var estela: Estela = $EstelaPuntoInicio/Trail2D
 onready var motor_sfx: Motor = $MotorSFX
 onready var escudo: Escudo = $Escudo setget ,get_escudo
@@ -29,11 +29,11 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent):
-	#Esta vivo el jugador? 
+	# Esta vivo el jugador? 
 	if not esta_input_activo():
 		return 
 	
-	#Disparo_rayo
+	# Disparar Laser
 	if event.is_action_pressed("disparo_secundario"):
 		laser.set_is_casting(true)
 	if event.is_action_released("disparo_secundario"):
@@ -45,11 +45,11 @@ func _unhandled_input(event: InputEvent):
 	elif event.is_action_pressed("mover_atras"):
 		estela.set_max_points(0)
 	
-		#Apagando Motor
+	# Apagando Motor
 	if (event.is_action_released("mover_adelante") or event.is_action_released("mover_atras")):
 		motor_sfx.sonido_off()
 	
-	#Escudo 
+	# Escudo 
 	if event.is_action_pressed("escudo") and not escudo.get_esta_activado():
 		escudo.activar()
 
