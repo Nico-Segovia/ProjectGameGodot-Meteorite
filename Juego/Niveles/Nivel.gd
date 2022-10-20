@@ -14,7 +14,7 @@ export var tiempo_limite: int = 10
 ##Music
 export var musica_nivel: AudioStream = null
 export var musica_combate: AudioStream = null
-#levels
+#Levels
 export(String, FILE, "*.tscn") var prox_nivel = ""
 
 ## Atributos Onready
@@ -45,14 +45,13 @@ func _ready():
 	actualizador_timer.start()
 
 func _unhandled_input(event: InputEvent) -> void:
-	##ToDo: Solo para debug, quitar en release
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 	
 	if event.is_action_pressed("ui_accept"):
 		OS.window_fullscreen = true
 
-##Metodos Custom
+## Metodos Custom
 func conectar_seniales() -> void:
 	Eventos.connect("disparo", self, "_on_disparo")
 	Eventos.connect("nave_destruida",self, "_on_nave_destruida")
